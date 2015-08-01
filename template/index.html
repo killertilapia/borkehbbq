@@ -1,0 +1,22 @@
+<div class="" ng-controller="IndexCtrl as index">
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in index.menu">
+            <td>{{$index + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price | currency : 'P'}}</td>
+            <td>
+                <ngcart-addtocart id="{{item.id}}" name="{{item.name}}" price="{{item.price}}" quantity="1" item="{{item.desc}}">Add</ngcart-addtocart>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

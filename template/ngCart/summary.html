@@ -1,0 +1,14 @@
+<div id="cart-summary-container">
+	<div id="cart-summary-icon">
+		<i class="fa fa-shopping-cart fa-2x"></i>
+	</div>
+	<div id="cart-summary-data">
+		<div class="summary-item-count">{{ ngCart.getTotalItems() }} <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize></div>
+		<div class="summary-item-total">{{ ngCart.totalCost() | currency : 'P' }}</div>
+	</div>
+</div>
+
+
+
+
+
